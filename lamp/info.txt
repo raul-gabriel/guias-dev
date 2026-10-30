@@ -1,0 +1,34 @@
+Conectar: mysql -u root -p
+Reiniciar Apache: sudo systemctl restart apache2
+Logs Apache: sudo tail -f /var/log/apache2/error.log
+Reiniciar MySQL: sudo systemctl restart mysql
+
+
+
+
+##instlar phpmyadmin
+sudo apt update
+sudo apt install phpmyadmin -y
+# Crear enlace simbólico
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+# Reiniciar Apache
+sudo systemctl restart apache2
+
+
+1)Servidor web: Selecciona apache2 (usa Espacio para marcar, luego Tab y Enter)
+2)Configurar base de datos: Selecciona Yes
+3)Contraseña phpMyAdmin: Ingresa una contraseña
+
+
+
+#instlar programas
+sudo dpkg -i mysql.deb
+sudo apt-get install -f
+
+
+
+
+lamp start    # Iniciar cuando vayas a programar
+lamp stop     # Detener cuando termines
+lamp restart  # Reiniciar si algo falla
+lamp status   # Ver si están corriendo
